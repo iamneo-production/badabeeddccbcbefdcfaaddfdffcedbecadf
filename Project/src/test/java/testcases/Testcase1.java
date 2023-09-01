@@ -14,7 +14,6 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -132,21 +131,44 @@ public class Testcase1 extends Base {
             // options.addArguments("--remote-allow-origins=*");
             log.info("Browser launched");
             driver.manage().window().maximize();
+            driver.findElement(By.linkText("Bus")).click(); 
+             log.info("Bus Clicked");
+            driver.findElement(By.xpath("//div/input[@id='source']"));
+            WebElement sr = driver.findElement(By.xpath("//div/input[@id='source']"));
+            sr.sendKeys(Departure);
+            String optionXpath = "//ul/li[contains(text(),'" + Departure + "')]";
+            WebElement departureOption = driver.findElement(By.xpath(optionXpath));
+            if (departureOption.isDisplayed()) {
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(05));
+                departureOption.click();
+                }
+                log.info("Departure location captured");
+                
             WebDriverWait wait0 = new WebDriverWait(driver, Duration.ofSeconds(30));
-            WebElement from= driver.findElement(By.xpath("//div/input[@id='source']"));
-            from.click();
-            from.sendKeys(Departure);
-            WebElement to= driver.findElement(By.xpath("//div/input[@id='destination']"));
-            to.click();
-            to.sendKeys(Destination);
-            driver.findElement(By.xpath("//div/input[@id='datepicker1']")).click();
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]")).click();
-            driver.findElement(By.xpath("//div/a[contains(text(),'Search')]")).click();
-        
-    
             
+            driver.findElement(By.xpath("//div/input[@id='destination']"));
+            WebElement des = driver.findElement(By.xpath("//div/input[@id='destination']"));
+            des.sendKeys(Destination);
+            String optionXpath1 = "//ul/li[contains(text(),'" + Destination + "')]";
+            WebElement desoption = driver.findElement(By.xpath(optionXpath1));
 
+            if (desoption.isDisplayed()) {
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+                desoption.click();
+                }
+            log.info("Destination location captured");
+            driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
+            WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
+             datepick.click();
+            WebElement choosedate = driver.findElement(By.xpath("//div[2]/table/tbody/tr[4]/td[7]/a[contains(text(),'24')]"));
+             choosedate.click();
+            log.info("Travel Date choosen");
+           WebElement searchLink = driver.findElement(By.xpath("//div/a[contains(text(),'Search')]"));
+           searchLink.click();
+           log.info("Search clicked");
+         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            String currenturl = driver.getCurrentUrl();
+           Assert.assertTrue(currenturl.contains("Mumbai") && currenturl.contains("Chennai"), "Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords");
             test.pass("Test passed successfully");
             log.info("Page asserted with keyword of depature and destination");
             
@@ -168,17 +190,31 @@ public class Testcase1 extends Base {
             //options.addArguments("--remote-allow-origins=*");
             log.info("Browser launched");
             driver.manage().window().maximize();
-            WebDriverWait wait0 = new WebDriverWait(driver, Duration.ofSeconds(30));
-            WebElement from= driver.findElement(By.xpath("//div/input[@id='source']"));
-            from.click();
-            from.sendKeys("Coimbatore");
-            WebElement to= driver.findElement(By.xpath("//div/input[@id='destination']"));
-            to.click();
-            to.sendKeys("Bengaluru");
-            driver.findElement(By.xpath("//div/input[@id='datepicker1']")).click();
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]")).click();
-            driver.findElement(By.xpath("//div/a[contains(text(),'Search')]")).click();
+            driver.findElement(By.linkText("Bus")).click();
+            log.info("Test case 3  Bus click done");
+            String Blr = "Bangalore";
+            driver.findElement(By.xpath("//div/input[@id='source']"));
+            WebElement sr3 = driver.findElement(By.xpath("//div/input[@id='source']"));
+            sr3.sendKeys(Blr);
+            String optionXpath3 = "//ul/li[contains(text(),'Bangalore')]";
+            WebElement desoption3 = driver.findElement(By.xpath(optionXpath3));
+            desoption3.click();
+            log.info("Departure place Captured");
+            String Cbe= "Coimbatore";
+            WebElement sr4 = driver.findElement(By.xpath("//div/input[@id='destination']"));
+            sr4.sendKeys(Cbe);
+            String optionXpath4 = "//ul/li[contains(text(),'Coimbatore')]";
+            WebElement desoption4 = driver.findElement(By.xpath(optionXpath4));
+            desoption4.click();
+             log.info("Destination place Captured");
+         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
+            WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
+             datepick.click();
+            WebElement choosedate = driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]/a[contains(text(),'25')]"));
+             choosedate.click();
+           WebElement searchLink1 = driver.findElement(By.xpath("//div/a[contains(text(),'Search')]"));
+           searchLink1.click();
             log.info("Search click");
             WebDriverWait wait03 = new WebDriverWait(driver, Duration.ofSeconds(10));
            String currenturl1 = driver.getCurrentUrl();

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-01T07:29:53 UTC" name="Surefire suite" finished-at="2023-09-01T07:30:38 UTC" duration-ms="45793">
+  <suite started-at="2023-08-21T09:57:08 UTC" name="Surefire suite" finished-at="2023-08-21T09:58:02 UTC" duration-ms="54367">
     <groups>
     </groups>
-    <test started-at="2023-09-01T07:29:53 UTC" name="Surefire test" finished-at="2023-09-01T07:30:38 UTC" duration-ms="45793">
+    <test started-at="2023-08-21T09:57:08 UTC" name="Surefire test" finished-at="2023-08-21T09:58:02 UTC" duration-ms="54367">
       <class name="testcases.Testcase1">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@54c5a2ff]" started-at="2023-09-01T07:29:53 UTC" name="beforeMethod" finished-at="2023-09-01T07:29:58 UTC" duration-ms="5744" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@7526515b]" started-at="2023-08-21T09:57:08 UTC" name="beforeMethod" finished-at="2023-08-21T09:57:15 UTC" duration-ms="6581" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Tc001()[pri:1, instance:testcases.Testcase1@54c5a2ff]" started-at="2023-09-01T07:29:58 UTC" name="Tc001" finished-at="2023-09-01T07:30:20 UTC" duration-ms="21431" status="PASS">
+        <test-method signature="Tc001()[pri:1, instance:testcases.Testcase1@7526515b]" started-at="2023-08-21T09:57:15 UTC" name="Tc001" finished-at="2023-08-21T09:57:31 UTC" duration-ms="16175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc001 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@54c5a2ff]" started-at="2023-09-01T07:30:20 UTC" name="afterMethod" finished-at="2023-09-01T07:30:20 UTC" duration-ms="546" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@7526515b]" started-at="2023-08-21T09:57:31 UTC" name="afterMethod" finished-at="2023-08-21T09:57:31 UTC" duration-ms="532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@54c5a2ff]" started-at="2023-09-01T07:30:21 UTC" name="beforeMethod" finished-at="2023-09-01T07:30:25 UTC" duration-ms="3560" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@7526515b]" started-at="2023-08-21T09:57:33 UTC" name="beforeMethod" finished-at="2023-08-21T09:57:36 UTC" duration-ms="3182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Tc002(java.lang.String,java.lang.String)[pri:2, instance:testcases.Testcase1@54c5a2ff]" started-at="2023-09-01T07:30:25 UTC" name="Tc002" data-provider="testData" finished-at="2023-09-01T07:30:30 UTC" duration-ms="4903" status="PASS">
+        <test-method signature="Tc002(java.lang.String,java.lang.String)[pri:2, instance:testcases.Testcase1@7526515b]" started-at="2023-08-21T09:57:36 UTC" name="Tc002" data-provider="testData" finished-at="2023-08-21T09:57:47 UTC" duration-ms="11303" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,65 +39,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc002 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@54c5a2ff]" started-at="2023-09-01T07:30:30 UTC" name="afterMethod" finished-at="2023-09-01T07:30:30 UTC" duration-ms="184" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@7526515b]" started-at="2023-08-21T09:57:47 UTC" name="afterMethod" finished-at="2023-08-21T09:57:47 UTC" duration-ms="147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@54c5a2ff]" started-at="2023-09-01T07:30:30 UTC" name="beforeMethod" finished-at="2023-09-01T07:30:33 UTC" duration-ms="3327" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@7526515b]" started-at="2023-08-21T09:57:47 UTC" name="beforeMethod" finished-at="2023-08-21T09:57:51 UTC" duration-ms="3238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Tc003()[pri:3, instance:testcases.Testcase1@54c5a2ff]" started-at="2023-09-01T07:30:33 UTC" name="Tc003" finished-at="2023-09-01T07:30:38 UTC" duration-ms="4932" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at testcases.Testcase1.Tc003(Testcase1.java:185)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="Tc003()[pri:3, instance:testcases.Testcase1@7526515b]" started-at="2023-08-21T09:57:51 UTC" name="Tc003" finished-at="2023-08-21T09:58:02 UTC" duration-ms="11530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc003 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@54c5a2ff]" started-at="2023-09-01T07:30:38 UTC" name="afterMethod" finished-at="2023-09-01T07:30:38 UTC" duration-ms="191" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@7526515b]" started-at="2023-08-21T09:58:02 UTC" name="afterMethod" finished-at="2023-08-21T09:58:02 UTC" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
