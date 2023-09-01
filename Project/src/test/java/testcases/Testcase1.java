@@ -143,7 +143,8 @@ public class Testcase1 extends Base {
             datepick.click();
             // Wait for the date picker to appear (you may need to adjust the wait time)
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            driver.findElement(By.cssSelector(".datepicker .current-day")).click();
+            WebElement choosedate = driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]/a[contains(text(),'25')]"));
+            choosedate.click();
 
             test.pass("Test passed successfully");
             log.info("Page asserted with keyword of depature and destination");
