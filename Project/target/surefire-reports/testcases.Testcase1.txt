@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: testcases.Testcase1
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.737 s - in testcases.Testcase1
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 49.852 s <<< FAILURE! - in testcases.Testcase1
+Tc003(testcases.Testcase1)  Time elapsed: 5.391 s  <<< FAILURE!
+java.lang.AssertionError: Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords expected [true] but found [false]
+	at testcases.Testcase1.Tc003(Testcase1.java:185)
+
