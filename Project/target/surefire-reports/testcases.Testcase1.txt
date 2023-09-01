@@ -1,19 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: testcases.Testcase1
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 1, Errors: 0, Skipped: 8, Time elapsed: 13.408 s <<< FAILURE! - in testcases.Testcase1
-beforeMethod(testcases.Testcase1)  Time elapsed: 12.484 s  <<< FAILURE!
-org.openqa.selenium.SessionNotCreatedException: 
-Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.0.4'
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.162+', java.version: '11.0.20'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}]}]
-Capabilities {browserName: chrome}
-	at testcases.Testcase1.beforeMethod(Testcase1.java:201)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: connection timed out: /34.85.201.58:4445
-	at testcases.Testcase1.beforeMethod(Testcase1.java:201)
-Caused by: java.net.ConnectException: connection timed out: /34.85.201.58:4445
-Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /34.85.201.58:4445
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 49.092 s <<< FAILURE! - in testcases.Testcase1
+Tc003(testcases.Testcase1)  Time elapsed: 4.076 s  <<< FAILURE!
+java.lang.AssertionError: Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords expected [true] but found [false]
+	at testcases.Testcase1.Tc003(Testcase1.java:185)
 
