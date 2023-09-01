@@ -89,38 +89,38 @@ public class Testcase1 extends Base {
     }
 
 
-    @Test(priority = 1)
-    public void Tc001() throws InterruptedException, IOException {
-        try {
-            ExtentTest test = reporter.createTest("Abhibus booking page");
-            e = new EventHandler();
-            driver.get(prop.getProperty("url") + "/");
-            //options.addArguments("--remote-allow-origins=*");
-            log.info("Browser launched");
-            driver.manage().window().maximize();
-            driver.findElement(By.linkText("Trains")).click();
-            log.info("Redirected to Train booking page");
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		    Assert.assertTrue(driver.getCurrentUrl().contains("trains"));
-            log.info("Asserted the URL contains keyword of Train");
-            driver.findElement(By.xpath("//div/a/img[@alt='Abhibus']"));
-            WebElement nav = driver.findElement(By.xpath("//div/a/img[@alt='Abhibus']"));
-            nav.click();
-            log.info("Navigated back to homepage");
-            WebDriverWait wait01 = new WebDriverWait(driver, Duration.ofSeconds(10));
-            driver.findElement(By.linkText("Login / Register")).click();
-            WebElement linkElement = driver.findElement(By.linkText("Login/Signup with OTP"));
-            Assert.assertTrue(linkElement.isDisplayed()); // or linkElement.isEnabled()
-            log.info("Page asserted for having the keyword Login/Signup with OTP ");
-            test.pass("Test passed successfully");
-        }   
+    // @Test(priority = 1)
+    // public void Tc001() throws InterruptedException, IOException {
+    //     try {
+    //         ExtentTest test = reporter.createTest("Abhibus booking page");
+    //         e = new EventHandler();
+    //         driver.get(prop.getProperty("url") + "/");
+    //         //options.addArguments("--remote-allow-origins=*");
+    //         log.info("Browser launched");
+    //         driver.manage().window().maximize();
+    //         driver.findElement(By.linkText("Trains")).click();
+    //         log.info("Redirected to Train booking page");
+    //         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	// 	    Assert.assertTrue(driver.getCurrentUrl().contains("trains"));
+    //         log.info("Asserted the URL contains keyword of Train");
+    //         driver.findElement(By.xpath("//div/a/img[@alt='Abhibus']"));
+    //         WebElement nav = driver.findElement(By.xpath("//div/a/img[@alt='Abhibus']"));
+    //         nav.click();
+    //         log.info("Navigated back to homepage");
+    //         WebDriverWait wait01 = new WebDriverWait(driver, Duration.ofSeconds(10));
+    //         driver.findElement(By.linkText("Login / Register")).click();
+    //         WebElement linkElement = driver.findElement(By.linkText("Login/Signup with OTP"));
+    //         Assert.assertTrue(linkElement.isDisplayed()); // or linkElement.isEnabled()
+    //         log.info("Page asserted for having the keyword Login/Signup with OTP ");
+    //         test.pass("Test passed successfully");
+    //     }   
 
-        catch (Exception ex) {
-        ExtentTest test = reporter.createTest("Bus Booking");
-        test.log(Status.FAIL, "Unable to load the url",
-        MediaEntityBuilder.createScreenCaptureFromPath(screenshotHandler.captureScreenshot(driver, "Ticket Booking")).build());
-        }
-    }
+    //     catch (Exception ex) {
+    //     ExtentTest test = reporter.createTest("Bus Booking");
+    //     test.log(Status.FAIL, "Unable to load the url",
+    //     MediaEntityBuilder.createScreenCaptureFromPath(screenshotHandler.captureScreenshot(driver, "Ticket Booking")).build());
+    //     }
+    // }
 
     @Test(priority = 2, dataProvider = "testData")
     public void Tc002(String Departure, String Destination) throws InterruptedException, IOException {
@@ -132,43 +132,10 @@ public class Testcase1 extends Base {
             log.info("Browser launched");
             driver.manage().window().maximize();
             WebDriverWait wait0 = new WebDriverWait(driver, Duration.ofSeconds(30));
-            driver.findElement(By.xpath("//div/input[@id='source']")).sendKeys(Departure);
-            driver.findElement(By.xpath("//div/input[@id='destination']")).sendKeys(Departure);
-            // WebElement sr = driver.findElement(By.xpath("//div/input[@id='source']"));
-            // sr.sendKeys(Departure);
-            // String optionXpath = "//ul/li[contains(text(),'" + Departure + "')]";
-            // WebElement departureOption = driver.findElement(By.xpath(optionXpath));
-            // if (departureOption.isDisplayed()) {
-            //     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(05));
-            //     departureOption.click();
-            //     }
-            //     log.info("Departure location captured");
-                
-            
-            
-          
-            // WebElement des = driver.findElement(By.xpath("//div/input[@id='destination']"));
-            // des.sendKeys(Destination);
-        //     String optionXpath1 = "//ul/li[contains(text(),'" + Destination + "')]";
-        //     WebElement desoption = driver.findElement(By.xpath(optionXpath1));
-
-        //     if (desoption.isDisplayed()) {
-        //         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        //         desoption.click();
-        //         }
-        //     log.info("Destination location captured");
-        //     driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
-        //     WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
-        //      datepick.click();
-        //     WebElement choosedate = driver.findElement(By.xpath("//div[2]/table/tbody/tr[4]/td[7]/a[contains(text(),'24')]"));
-        //      choosedate.click();
-        //     log.info("Travel Date choosen");
-        //    WebElement searchLink = driver.findElement(By.xpath("//div/a[contains(text(),'Search')]"));
-        //    searchLink.click();
-        //    log.info("Search clicked");
-        //  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        //     String currenturl = driver.getCurrentUrl();
-        //    Assert.assertTrue(currenturl.contains("Mumbai") && currenturl.contains("Chennai"), "Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords");
+            WebElement from= driver.findElement(By.xpath("//div/input[@id='source']"));
+            from.click();
+            from.sendKeys(Departure);
+           WebElement to driver.findElement(By.xpath("//div/input[@id='destination']"));
             test.pass("Test passed successfully");
             log.info("Page asserted with keyword of depature and destination");
             

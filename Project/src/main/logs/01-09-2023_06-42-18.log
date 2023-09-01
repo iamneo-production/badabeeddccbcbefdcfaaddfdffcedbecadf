@@ -1,0 +1,6 @@
+Sep 01, 2023 6:42:27 AM testcases.Testcase1 Tc002
+INFO: Browser launched
+Sep 01, 2023 6:42:28 AM testcases.Testcase1 Tc002
+INFO: Page asserted with keyword of depature and destination
+Sep 01, 2023 6:42:29 AM testcases.Testcase1 afterMethod
+INFO: Browser closed
