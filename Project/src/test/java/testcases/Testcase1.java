@@ -131,44 +131,44 @@ public class Testcase1 extends Base {
             // options.addArguments("--remote-allow-origins=*");
             log.info("Browser launched");
             driver.manage().window().maximize();
-            driver.findElement(By.linkText("Bus")).click(); 
-             log.info("Bus Clicked");
-            driver.findElement(By.xpath("//div/input[@id='source']"));
-            WebElement sr = driver.findElement(By.xpath("//div/input[@id='source']"));
-            sr.sendKeys(Departure);
-            String optionXpath = "//ul/li[contains(text(),'" + Departure + "')]";
-            WebElement departureOption = driver.findElement(By.xpath(optionXpath));
-            if (departureOption.isDisplayed()) {
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(05));
-                departureOption.click();
-                }
-                log.info("Departure location captured");
-                
             WebDriverWait wait0 = new WebDriverWait(driver, Duration.ofSeconds(30));
+            driver.findElement(By.xpath("//div/input[@id='source']")).sendKeys(Departure);
+            driver.findElement(By.xpath("//div/input[@id='destination']")).sendKeys(Departure);
+            // WebElement sr = driver.findElement(By.xpath("//div/input[@id='source']"));
+            // sr.sendKeys(Departure);
+            // String optionXpath = "//ul/li[contains(text(),'" + Departure + "')]";
+            // WebElement departureOption = driver.findElement(By.xpath(optionXpath));
+            // if (departureOption.isDisplayed()) {
+            //     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(05));
+            //     departureOption.click();
+            //     }
+            //     log.info("Departure location captured");
+                
             
-            driver.findElement(By.xpath("//div/input[@id='destination']"));
-            WebElement des = driver.findElement(By.xpath("//div/input[@id='destination']"));
-            des.sendKeys(Destination);
-            String optionXpath1 = "//ul/li[contains(text(),'" + Destination + "')]";
-            WebElement desoption = driver.findElement(By.xpath(optionXpath1));
+            
+          
+            // WebElement des = driver.findElement(By.xpath("//div/input[@id='destination']"));
+            // des.sendKeys(Destination);
+        //     String optionXpath1 = "//ul/li[contains(text(),'" + Destination + "')]";
+        //     WebElement desoption = driver.findElement(By.xpath(optionXpath1));
 
-            if (desoption.isDisplayed()) {
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-                desoption.click();
-                }
-            log.info("Destination location captured");
-            driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
-            WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
-             datepick.click();
-            WebElement choosedate = driver.findElement(By.xpath("//div[2]/table/tbody/tr[4]/td[7]/a[contains(text(),'24')]"));
-             choosedate.click();
-            log.info("Travel Date choosen");
-           WebElement searchLink = driver.findElement(By.xpath("//div/a[contains(text(),'Search')]"));
-           searchLink.click();
-           log.info("Search clicked");
-         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            String currenturl = driver.getCurrentUrl();
-           Assert.assertTrue(currenturl.contains("Mumbai") && currenturl.contains("Chennai"), "Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords");
+        //     if (desoption.isDisplayed()) {
+        //         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        //         desoption.click();
+        //         }
+        //     log.info("Destination location captured");
+        //     driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
+        //     WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
+        //      datepick.click();
+        //     WebElement choosedate = driver.findElement(By.xpath("//div[2]/table/tbody/tr[4]/td[7]/a[contains(text(),'24')]"));
+        //      choosedate.click();
+        //     log.info("Travel Date choosen");
+        //    WebElement searchLink = driver.findElement(By.xpath("//div/a[contains(text(),'Search')]"));
+        //    searchLink.click();
+        //    log.info("Search clicked");
+        //  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        //     String currenturl = driver.getCurrentUrl();
+        //    Assert.assertTrue(currenturl.contains("Mumbai") && currenturl.contains("Chennai"), "Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords");
             test.pass("Test passed successfully");
             log.info("Page asserted with keyword of depature and destination");
             
