@@ -5,9 +5,9 @@
     <classes>
       <class name="testcases.Testcase1">
         <methods>
+          <include name="Tc003"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="testBusBooking" invocation-numbers="0"/>
         </methods>
       </class> <!-- testcases.Testcase1 -->
     </classes>

@@ -171,10 +171,10 @@ public class Testcase1 extends Base {
             WebDriverWait wait0 = new WebDriverWait(driver, Duration.ofSeconds(30));
             WebElement from= driver.findElement(By.xpath("//div/input[@id='source']"));
             from.click();
-            from.sendKeys("chennai");
+            from.sendKeys("Coimbatore");
             WebElement to= driver.findElement(By.xpath("//div/input[@id='destination']"));
             to.click();
-            to.sendKeys("Hyderabad");
+            to.sendKeys("Bengaluru");
             driver.findElement(By.xpath("//div/input[@id='datepicker1']")).click();
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]")).click();
