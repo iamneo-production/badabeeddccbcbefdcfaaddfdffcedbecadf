@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -140,6 +141,16 @@ public class Testcase1 extends Base {
             to.sendKeys(Destination);
             WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
             datepick.click();
+            // Wait for the date picker to appear (you may need to adjust the wait time)
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".datepicker")));
+
+            // Get the current date as text (assuming it's displayed as text)
+            String currentDayText = driver.findElement(By.cssSelector(".datepicker .current-day")).getText();
+
+            // Find and click on the element with the current date text
+            WebElement currentDate = driver.findElement(By.xpath("//div[contains(@class, 'datepicker')]//*[text()='" + currentDayText + "']"));
+            currentDate.click();
 
             test.pass("Test passed successfully");
             log.info("Page asserted with keyword of depature and destination");
