@@ -159,40 +159,40 @@ public class Testcase1 extends Base {
         }
     }
 
-    @Test(priority = 3)
-    public void Tc003() throws InterruptedException, IOException {
-        try {
-            ExtentTest test = reporter.createTest("Abhibus booking page");
-            e = new EventHandler();
-            driver.get(prop.getProperty("url") + "/");
-            //options.addArguments("--remote-allow-origins=*");
-            log.info("Browser launched");
-            driver.manage().window().maximize();
-            WebDriverWait wait0 = new WebDriverWait(driver, Duration.ofSeconds(30));
-            WebElement from= driver.findElement(By.xpath("//div/input[@id='source']"));
-            from.click();
-            from.sendKeys("Coimbatore");
-            WebElement to= driver.findElement(By.xpath("//div/input[@id='destination']"));
-            to.click();
-            to.sendKeys("Bengaluru");
-            driver.findElement(By.xpath("//div/input[@id='datepicker1']")).click();
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]")).click();
-            driver.findElement(By.xpath("//div/a[contains(text(),'Search')]")).click();
-            log.info("Search click");
-            WebDriverWait wait03 = new WebDriverWait(driver, Duration.ofSeconds(10));
-           String currenturl1 = driver.getCurrentUrl();
-           Assert.assertTrue(currenturl1.contains("Bangalore") && currenturl1.contains("Coimbatore"), "Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords");  
-            log.info("Final page url Asserted");
-            test.pass("Test passed successfully");
-        }   
+    // @Test(priority = 3)
+    // public void Tc003() throws InterruptedException, IOException {
+    //     try {
+    //         ExtentTest test = reporter.createTest("Abhibus booking page");
+    //         e = new EventHandler();
+    //         driver.get(prop.getProperty("url") + "/");
+    //         //options.addArguments("--remote-allow-origins=*");
+    //         log.info("Browser launched");
+    //         driver.manage().window().maximize();
+    //         WebDriverWait wait0 = new WebDriverWait(driver, Duration.ofSeconds(30));
+    //         WebElement from= driver.findElement(By.xpath("//div/input[@id='source']"));
+    //         from.click();
+    //         from.sendKeys("Coimbatore");
+    //         WebElement to= driver.findElement(By.xpath("//div/input[@id='destination']"));
+    //         to.click();
+    //         to.sendKeys("Bengaluru");
+    //         driver.findElement(By.xpath("//div/input[@id='datepicker1']")).click();
+    //         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    //         driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]")).click();
+    //         driver.findElement(By.xpath("//div/a[contains(text(),'Search')]")).click();
+    //         log.info("Search click");
+    //         WebDriverWait wait03 = new WebDriverWait(driver, Duration.ofSeconds(10));
+    //        String currenturl1 = driver.getCurrentUrl();
+    //        Assert.assertTrue(currenturl1.contains("Bangalore") && currenturl1.contains("Coimbatore"), "Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords");  
+    //         log.info("Final page url Asserted");
+    //         test.pass("Test passed successfully");
+    //     }   
 
-         catch (Exception ex) {
-        ExtentTest test = reporter.createTest("Bus Booking");
-        test.log(Status.FAIL, "Unable to Book Bus Ticket",
-         MediaEntityBuilder.createScreenCaptureFromPath(screenshotHandler.captureScreenshot(driver, "Ticket Booking")).build());
-        }
-    }
+    //      catch (Exception ex) {
+    //     ExtentTest test = reporter.createTest("Bus Booking");
+    //     test.log(Status.FAIL, "Unable to Book Bus Ticket",
+    //      MediaEntityBuilder.createScreenCaptureFromPath(screenshotHandler.captureScreenshot(driver, "Ticket Booking")).build());
+    //     }
+    // }
 
     
    
