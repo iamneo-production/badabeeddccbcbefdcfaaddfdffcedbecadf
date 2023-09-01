@@ -139,12 +139,13 @@ public class Testcase1 extends Base {
             WebElement to= driver.findElement(By.xpath("//div/input[@id='destination']"));
             to.click();
             to.sendKeys(Destination);
-            WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
-            datepick.click();
-            // Wait for the date picker to appear (you may need to adjust the wait time)
+            driver.findElement(By.xpath("//div/input[@id='datepicker1']")).click();
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement choosedate = driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]/a[contains(text(),'25')]"));
-            choosedate.click();
+            driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]")).click();
+            driver.findElement(By.xpath("//div/a[contains(text(),'Search')]")).click();
+        
+    
+            
 
             test.pass("Test passed successfully");
             log.info("Page asserted with keyword of depature and destination");
