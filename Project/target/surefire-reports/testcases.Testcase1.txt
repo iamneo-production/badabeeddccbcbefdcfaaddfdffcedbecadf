@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: testcases.Testcase1
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.408 s - in testcases.Testcase1
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 36.166 s <<< FAILURE! - in testcases.Testcase1
+testBusBooking(testcases.Testcase1)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The constructor WebDriverWait(WebDriver, int) is undefined
+	The constructor WebDriverWait(WebDriver, int) is undefined
+	test cannot be resolved
+	Syntax error, insert ")" to complete Expression
+
+	at testcases.Testcase1.testBusBooking(Testcase1.java:140)
+
