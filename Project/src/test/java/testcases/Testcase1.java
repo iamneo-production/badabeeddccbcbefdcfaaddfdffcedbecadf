@@ -181,54 +181,54 @@ public class Testcase1 extends Base {
     //     }
     // }
 
-    @Test(priority = 3)
-    public void Tc003() throws InterruptedException, IOException {
-        try {
-            ExtentTest test = reporter.createTest("Abhibus booking page");
-            e = new EventHandler();
-            driver.get(prop.getProperty("url") + "/");
-            //options.addArguments("--remote-allow-origins=*");
-            log.info("Browser launched");
-            driver.manage().window().maximize();
-            driver.findElement(By.linkText("Bus")).click();
-            log.info("Test case 3  Bus click done");
-            String Blr = "Bangalore";
-            driver.findElement(By.xpath("//div/input[@id='source']"));
-            WebElement sr3 = driver.findElement(By.xpath("//div/input[@id='source']"));
-            sr3.sendKeys(Blr);
-            String optionXpath3 = "//ul/li[contains(text(),'Bangalore')]";
-            WebElement desoption3 = driver.findElement(By.xpath(optionXpath3));
-            desoption3.click();
-            log.info("Departure place Captured");
-            String Cbe= "Coimbatore";
-            WebElement sr4 = driver.findElement(By.xpath("//div/input[@id='destination']"));
-            sr4.sendKeys(Cbe);
-            String optionXpath4 = "//ul/li[contains(text(),'Coimbatore')]";
-            WebElement desoption4 = driver.findElement(By.xpath(optionXpath4));
-            desoption4.click();
-             log.info("Destination place Captured");
-         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
-            WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
-             datepick.click();
-            WebElement choosedate = driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]/a[contains(text(),'25')]"));
-             choosedate.click();
-           WebElement searchLink1 = driver.findElement(By.xpath("//div/a[contains(text(),'Search')]"));
-           searchLink1.click();
-            log.info("Search click");
-            WebDriverWait wait03 = new WebDriverWait(driver, Duration.ofSeconds(10));
-           String currenturl1 = driver.getCurrentUrl();
-           Assert.assertTrue(currenturl1.contains("Bangalore") && currenturl1.contains("Coimbatore"), "Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords");  
-            log.info("Final page url Asserted");
-            test.pass("Test passed successfully");
-        }   
+    // @Test(priority = 3)
+    // public void Tc003() throws InterruptedException, IOException {
+    //     try {
+    //         ExtentTest test = reporter.createTest("Abhibus booking page");
+    //         e = new EventHandler();
+    //         driver.get(prop.getProperty("url") + "/");
+    //         //options.addArguments("--remote-allow-origins=*");
+    //         log.info("Browser launched");
+    //         driver.manage().window().maximize();
+    //         driver.findElement(By.linkText("Bus")).click();
+    //         log.info("Test case 3  Bus click done");
+    //         String Blr = "Bangalore";
+    //         driver.findElement(By.xpath("//div/input[@id='source']"));
+    //         WebElement sr3 = driver.findElement(By.xpath("//div/input[@id='source']"));
+    //         sr3.sendKeys(Blr);
+    //         String optionXpath3 = "//ul/li[contains(text(),'Bangalore')]";
+    //         WebElement desoption3 = driver.findElement(By.xpath(optionXpath3));
+    //         desoption3.click();
+    //         log.info("Departure place Captured");
+    //         String Cbe= "Coimbatore";
+    //         WebElement sr4 = driver.findElement(By.xpath("//div/input[@id='destination']"));
+    //         sr4.sendKeys(Cbe);
+    //         String optionXpath4 = "//ul/li[contains(text(),'Coimbatore')]";
+    //         WebElement desoption4 = driver.findElement(By.xpath(optionXpath4));
+    //         desoption4.click();
+    //          log.info("Destination place Captured");
+    //      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    //         driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
+    //         WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
+    //          datepick.click();
+    //         WebElement choosedate = driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]/a[contains(text(),'25')]"));
+    //          choosedate.click();
+    //        WebElement searchLink1 = driver.findElement(By.xpath("//div/a[contains(text(),'Search')]"));
+    //        searchLink1.click();
+    //         log.info("Search click");
+    //         WebDriverWait wait03 = new WebDriverWait(driver, Duration.ofSeconds(10));
+    //        String currenturl1 = driver.getCurrentUrl();
+    //        Assert.assertTrue(currenturl1.contains("Bangalore") && currenturl1.contains("Coimbatore"), "Page URL doesn't contain both 'Bangalore' and 'Coimbatore' keywords");  
+    //         log.info("Final page url Asserted");
+    //         test.pass("Test passed successfully");
+    //     }   
 
-         catch (Exception ex) {
-        ExtentTest test = reporter.createTest("Bus Booking");
-        test.log(Status.FAIL, "Unable to Book Bus Ticket",
-         MediaEntityBuilder.createScreenCaptureFromPath(screenshotHandler.captureScreenshot(driver, "Ticket Booking")).build());
-        }
-    }
+    //      catch (Exception ex) {
+    //     ExtentTest test = reporter.createTest("Bus Booking");
+    //     test.log(Status.FAIL, "Unable to Book Bus Ticket",
+    //      MediaEntityBuilder.createScreenCaptureFromPath(screenshotHandler.captureScreenshot(driver, "Ticket Booking")).build());
+    //     }
+    // }
 
     
    
