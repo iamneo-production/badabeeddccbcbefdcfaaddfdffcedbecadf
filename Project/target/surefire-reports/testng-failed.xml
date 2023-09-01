@@ -7,7 +7,9 @@
         <methods>
           <include name="Tc003"/>
           <include name="afterMethod"/>
+          <include name="Tc002"/>
           <include name="beforeMethod"/>
+          <include name="Tc001"/>
         </methods>
       </class> <!-- testcases.Testcase1 -->
     </classes>
