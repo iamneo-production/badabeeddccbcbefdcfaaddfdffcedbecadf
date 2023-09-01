@@ -1,0 +1,4 @@
+Sep 01, 2023 7:02:20 AM testcases.Testcase1 Tc002
+INFO: Browser launched
+Sep 01, 2023 7:02:33 AM testcases.Testcase1 afterMethod
+INFO: Browser closed
