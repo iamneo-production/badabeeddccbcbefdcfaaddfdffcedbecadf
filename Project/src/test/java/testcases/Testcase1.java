@@ -135,7 +135,12 @@ public class Testcase1 extends Base {
             WebElement from= driver.findElement(By.xpath("//div/input[@id='source']"));
             from.click();
             from.sendKeys(Departure);
-           WebElement to driver.findElement(By.xpath("//div/input[@id='destination']"));
+            WebElement to= driver.findElement(By.xpath("//div/input[@id='destination']"));
+            to.click();
+            to.sendKeys(Destination);
+            WebElement datepick = driver.findElement(By.xpath("//div/input[@id='datepicker1']"));
+            datepick.click();
+
             test.pass("Test passed successfully");
             log.info("Page asserted with keyword of depature and destination");
             
@@ -208,7 +213,7 @@ public void beforeMethod() throws MalformedURLException {
     @AfterMethod
     public void afterMethod() {
         
-        driver.quit();
+        // driver.quit();
         reporter.flush();
         log.info("Browser closed");
         LoggerHandler.closeHandler();
