@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="1" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-29T08:16:17 UTC" name="Surefire suite" finished-at="2023-10-29T08:19:42 UTC" duration-ms="205388">
+  <suite started-at="2023-10-29T08:25:40 UTC" name="Surefire suite" finished-at="2023-10-29T08:29:10 UTC" duration-ms="210307">
     <groups>
     </groups>
-    <test started-at="2023-10-29T08:16:17 UTC" name="Surefire test" finished-at="2023-10-29T08:19:42 UTC" duration-ms="205388">
+    <test started-at="2023-10-29T08:25:40 UTC" name="Surefire test" finished-at="2023-10-29T08:29:10 UTC" duration-ms="210307">
       <class name="testcases.Testcase1">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:16:17 UTC" name="beforeMethod" finished-at="2023-10-29T08:16:23 UTC" duration-ms="5782" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:25:40 UTC" name="beforeMethod" finished-at="2023-10-29T08:25:50 UTC" duration-ms="9820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Tc001()[pri:1, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:16:23 UTC" name="Tc001" finished-at="2023-10-29T08:16:41 UTC" duration-ms="18189" status="PASS">
+        <test-method signature="Tc001()[pri:1, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:25:50 UTC" name="Tc001" finished-at="2023-10-29T08:26:08 UTC" duration-ms="18449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc001 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:16:41 UTC" name="afterMethod" finished-at="2023-10-29T08:16:41 UTC" duration-ms="453" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:26:08 UTC" name="afterMethod" finished-at="2023-10-29T08:26:09 UTC" duration-ms="517" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:16:42 UTC" name="beforeMethod" finished-at="2023-10-29T08:19:42 UTC" duration-ms="180013" status="FAIL">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:26:10 UTC" name="beforeMethod" finished-at="2023-10-29T08:29:10 UTC" duration-ms="180012" status="FAIL">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.96.2']]>
+Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.96.3']]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.96.2'
+Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.96.3'
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:159)
@@ -100,7 +100,7 @@ at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHand
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Tc002(java.lang.String,java.lang.String)[pri:2, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:19:42 UTC" name="Tc002" data-provider="testData" finished-at="2023-10-29T08:19:42 UTC" duration-ms="0" status="SKIP">
+        <test-method signature="Tc002(java.lang.String,java.lang.String)[pri:2, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:29:10 UTC" name="Tc002" data-provider="testData" finished-at="2023-10-29T08:29:10 UTC" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -116,11 +116,11 @@ at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHand
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.96.2']]>
+Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.96.3']]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.96.2'
+Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.96.3'
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:159)
@@ -193,7 +193,7 @@ at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHand
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc002 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:19:42 UTC" name="afterMethod" finished-at="2023-10-29T08:19:42 UTC" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:29:10 UTC" name="afterMethod" finished-at="2023-10-29T08:29:10 UTC" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
