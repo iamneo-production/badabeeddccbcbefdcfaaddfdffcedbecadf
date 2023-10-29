@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: testcases.Testcase1
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 306.328 s <<< FAILURE! - in testcases.Testcase1
-beforeMethod(testcases.Testcase1)  Time elapsed: 199.514 s  <<< FAILURE!
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 206.891 s <<< FAILURE! - in testcases.Testcase1
+beforeMethod(testcases.Testcase1)  Time elapsed: 199.655 s  <<< FAILURE!
 org.openqa.selenium.SessionNotCreatedException: 
 Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
 Host info: host: 'badabeeddccbcbefdcfaaddfdffcedbecadf-0', ip: '10.56.96.3'
