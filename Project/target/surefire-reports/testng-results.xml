@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="1" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-29T08:31:16 UTC" name="Surefire suite" finished-at="2023-10-29T08:34:59 UTC" duration-ms="222849">
+  <suite started-at="2023-10-29T08:34:27 UTC" name="Surefire suite" finished-at="2023-10-29T08:40:29 UTC" duration-ms="362284">
     <groups>
     </groups>
-    <test started-at="2023-10-29T08:31:16 UTC" name="Surefire test" finished-at="2023-10-29T08:34:59 UTC" duration-ms="222849">
+    <test started-at="2023-10-29T08:34:27 UTC" name="Surefire test" finished-at="2023-10-29T08:40:29 UTC" duration-ms="362284">
       <class name="testcases.Testcase1">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:31:16 UTC" name="beforeMethod" finished-at="2023-10-29T08:31:39 UTC" duration-ms="22891" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:34:27 UTC" name="beforeMethod" finished-at="2023-10-29T08:37:10 UTC" duration-ms="162894" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Tc001()[pri:1, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:31:39 UTC" name="Tc001" finished-at="2023-10-29T08:31:58 UTC" duration-ms="18632" status="PASS">
+        <test-method signature="Tc001()[pri:1, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:37:10 UTC" name="Tc001" finished-at="2023-10-29T08:37:28 UTC" duration-ms="17732" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc001 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:31:58 UTC" name="afterMethod" finished-at="2023-10-29T08:31:58 UTC" duration-ms="582" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:37:28 UTC" name="afterMethod" finished-at="2023-10-29T08:37:28 UTC" duration-ms="586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:31:59 UTC" name="beforeMethod" finished-at="2023-10-29T08:34:59 UTC" duration-ms="180012" status="FAIL">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:37:29 UTC" name="beforeMethod" finished-at="2023-10-29T08:40:29 UTC" duration-ms="180014" status="FAIL">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
@@ -100,7 +100,7 @@ at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHand
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Tc002(java.lang.String,java.lang.String)[pri:2, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:34:59 UTC" name="Tc002" data-provider="testData" finished-at="2023-10-29T08:34:59 UTC" duration-ms="0" status="SKIP">
+        <test-method signature="Tc002(java.lang.String,java.lang.String)[pri:2, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:40:29 UTC" name="Tc002" data-provider="testData" finished-at="2023-10-29T08:40:29 UTC" duration-ms="1" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -193,7 +193,7 @@ at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHand
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc002 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:34:59 UTC" name="afterMethod" finished-at="2023-10-29T08:34:59 UTC" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testcases.Testcase1@1ed4ae0f]" started-at="2023-10-29T08:40:29 UTC" name="afterMethod" finished-at="2023-10-29T08:40:29 UTC" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
