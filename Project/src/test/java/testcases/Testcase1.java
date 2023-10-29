@@ -125,10 +125,10 @@ public class Testcase1 extends Base {
 
     @Test(priority = 2, dataProvider = "testData")
     public void Tc002(String Departure, String Destination) throws InterruptedException, IOException {
-        try {
+
             ExtentTest test = reporter.createTest("Abhibus booking page");
             e = new EventHandler();
-            driver.get(prop.getProperty("url") + "/");
+            // driver.get(prop.getProperty("url") + "/");
             // options.addArguments("--remote-allow-origins=*");
             log.info("Browser launched");
             driver.manage().window().maximize();
@@ -144,19 +144,12 @@ public class Testcase1 extends Base {
             driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td[1]")).click();
             driver.findElement(By.xpath("//div/a[contains(text(),'Search')]")).click();
         
-    
-            
+           
 
             test.pass("Test passed successfully");
             log.info("Page asserted with keyword of depature and destination");
             
-        } 
-        
-        catch (Exception ex) {
-            ExtentTest test = reporter.createTest("Bus Booking");
-            test.log(Status.FAIL, "Unable to capture the departure and destination location",
-             MediaEntityBuilder.createScreenCaptureFromPath(screenshotHandler.captureScreenshot(driver, "Ticket Booking")).build());
-        }
+    
     }
 
     // @Test(priority = 3)
@@ -205,7 +198,7 @@ public void beforeMethod() throws MalformedURLException {
     @AfterMethod
     public void afterMethod() {
         
-        driver.quit();
+        // driver.quit();
         reporter.flush();
         log.info("Browser closed");
         LoggerHandler.closeHandler();
